@@ -1,0 +1,69 @@
+def FirstFunction():
+    print("Hello Rakan ^^")
+#we can call the function by:
+FirstFunction()
+
+print("------------------------------")
+def SecondFunction(Name):
+    print("My Name is", Name)
+SecondFunction("Rakan")
+SecondFunction("Rayan")
+
+# Insert array into a function :)
+def ThirdFunction(*kids):
+  print("The youngest child is " + kids[2])
+
+ThirdFunction("Emil", "Tobias", "Linus")
+
+#Note, it's not like java. You can define each attribute outside the function
+def fourthfunction(child3, child2, child1):
+  print("The youngest child is " + child3)
+
+fourthfunction(child1 = "Emil", child2 = "Tobias", child3 = "Linus")
+
+#Also you can do this. but you need to put double **
+def Fifthfunction(**kid):
+  print("His last name is " + kid["lname"])
+
+Fifthfunction(fname = "Tobias", lname = "Refsnes")
+
+#We can make a solution if the function had no value inside it ( implement a default value )
+def Sixthfunction(country = "Norway"):
+  print("I am from " + country)
+
+Sixthfunction("Sweden")
+Sixthfunction("India")
+Sixthfunction() # it will print norway
+Sixthfunction("Brazil")
+
+# we can pass array inside it
+def SeventhFunction(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+SeventhFunction(fruits)
+
+#Return in functions:
+def ReturnFunction(x):
+    return 5 * x
+print(ReturnFunction(1))
+print(ReturnFunction(2))
+print(ReturnFunction(3))
+
+# We can use pass :)
+def myfunction():
+  pass
+
+#Recursion example 
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
